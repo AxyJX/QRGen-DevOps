@@ -2,6 +2,7 @@ Nama Tim : Nama Kelompok
 - 211110747 - Vincent Tandera (AxyJX)
 - 211111990 - Antony Vielo (V1LO)
 - 211111481 - Delfin Limriadi (Delfin-Limriadi)
+  
 Topik : Membuat web QR Generator
 
 Figma
