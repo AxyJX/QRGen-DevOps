@@ -21,6 +21,7 @@ Vincent:
 Antony:
 - HTML
 - CSS
+- JS
 
 Delfin:
 - HTML
