@@ -1,10 +1,13 @@
 const linkInputContainer = document.getElementById("linkInputContainer");
 const linkInput = document.getElementById("linkInput");
 const qrcodeContainer = document.getElementById("qrcode");
+const downloadBtn = document.getElementById("downloadBtn");
 
 function showLinkInput() {
 	linkInputContainer.classList.remove("hidden");
+	wifiInputContainer.classList.add("hidden");
 	qrcodeContainer.innerHTML = "";
+	downloadBtn.disabled = true;
 }
 
 function generateQRCode() {
@@ -12,7 +15,6 @@ function generateQRCode() {
 	if (!linkInputContainer.classList.contains("hidden")) {
 		url = linkInput.value;
 	}
-
 	if (url) {
 		QRCode.toDataURL(
 			url,
@@ -22,9 +24,19 @@ function generateQRCode() {
 					console.error(err);
 					return;
 				}
-				qrcodeContainer.innerHTML = <img src="${url}" alt="Generated QR code" width="500" height="500"/>;
+				qrcodeContainer.innerHTML = `<img src="${url}" alt="Generated QR code" width="500" height="500"/>`;
+				downloadBtn.disabled = false;
+				downloadBtn.onclick = () => {
+					const a = document.createElement("a");
+					a.href = url;
+					a.download = "qrcode.png";
+					a.click();
+				};
 			}
 		);
+	} else {
+		qrcodeContainer.innerHTML = "";
+		downloadBtn.disabled = true;
 	}
 }
 
