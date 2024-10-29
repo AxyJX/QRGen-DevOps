@@ -1,6 +1,9 @@
 const linkInputContainer = document.getElementById("linkInputContainer");
+
 const linkInput = document.getElementById("linkInput");
+
 const qrcodeContainer = document.getElementById("qrcode");
+
 const downloadBtn = document.getElementById("downloadBtn");
 
 function showLinkInput() {
