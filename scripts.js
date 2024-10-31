@@ -1,3 +1,4 @@
+/* global QRCode */
 const linkInputContainer = document.getElementById('linkInputContainer');
 const wifiInputContainer = document.getElementById('wifiInputContainer');
 const linkInput = document.getElementById('linkInput');
