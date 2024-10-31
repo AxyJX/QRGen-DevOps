@@ -5,18 +5,21 @@ const ssidInput = document.getElementById('ssidInput');
 const passwordInput = document.getElementById('passwordInput');
 const qrcodeContainer = document.getElementById('qrcode');
 const downloadBtn = document.getElementById('downloadBtn');
+
 function showLinkInput() {
   linkInputContainer.classList.remove('hidden');
   wifiInputContainer.classList.add('hidden');
   qrcodeContainer.innerHTML = '';
   downloadBtn.disabled = true;
 }
+
 function showWifiInput() {
   linkInputContainer.classList.add('hidden');
   wifiInputContainer.classList.remove('hidden');
   qrcodeContainer.innerHTML = '';
   downloadBtn.disabled = true;
 }
+
 function generateQRCode() {
   let url = '';
   if (!linkInputContainer.classList.contains('hidden')) {
@@ -26,6 +29,7 @@ function generateQRCode() {
     const password = passwordInput.value;
     url = `WIFI:T:WPA;S:${ssid};P:${password};;`;
   }
+
   if (url) {
     QRCode.toDataURL(url, { width: 500, height: 500, errorCorrectionLevel: 'H' }, (err, url) => {
       if (err) {
@@ -46,6 +50,7 @@ function generateQRCode() {
     downloadBtn.disabled = true;
   }
 }
+
 linkInput.addEventListener('input', generateQRCode);
 ssidInput.addEventListener('input', generateQRCode);
 passwordInput.addEventListener('input', generateQRCode);
