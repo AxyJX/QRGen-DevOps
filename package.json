@@ -1,0 +1,12 @@
+{
+  "name": "qrgen-devops",
+  "version": "1.0.0",
+  "description": "Nama Tim : Nama Kelompok\r - 211110747 - Vincent Tandera (AxyJX)\r - 211111990 - Antony Vielo (V1LO)\r - 211111481 - Delfin Limriadi (Delfin-Limriadi)",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
