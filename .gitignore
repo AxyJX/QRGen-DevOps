@@ -1,2 +1,4 @@
-#ignore dockerfile
+#ignore
 Dockerfile
+/node_modules
+
