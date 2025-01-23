@@ -44,6 +44,18 @@ function generateQRCode() {
         a.href = url;
         a.download = 'qrcode.png';
         a.click();
+      
+        // Send QR code to the backend
+        fetch('http://localhost:5000/save_qr', {
+          method: 'POST',  // Ensure this is set to POST
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ qr_code: url }),
+      })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error('Error:', error));
       };
     });
   } else {

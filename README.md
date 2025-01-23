@@ -1,7 +1,5 @@
 Nama Tim : Nama Kelompok
 - 211110747 - Vincent Tandera (AxyJX)
-- 211111990 - Antony Vielo (V1LO)
-- 211111481 - Delfin Limriadi (Delfin-Limriadi)
 
 Topik : Membuat web QR Generator
 
@@ -13,20 +11,3 @@ https://github.com/users/AxyJX/projects/3
 
 Docker:
 https://hub.docker.com/repository/docker/iblamevncnt/qrgenerator/general
-
-Pembagian Tugas:
-
-Vincent:
-- Scrum Master
-- JS
-- Web Design
-
-Antony:
-- HTML
-- CSS
-- JS
-
-Delfin:
-- HTML
-- CSS
-- JS
